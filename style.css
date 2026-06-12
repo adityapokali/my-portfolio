@@ -252,10 +252,16 @@ contact-links a {
 }
 
 .resume-btn {
-    background: #00bfff !important;
-    color: white !important;
-    border: 2px solid #00bfff;
-    box-shadow: 0 0 15px #00bfff;
+    background: linear-gradient(90deg,#009dff,#00c6ff);
+    color: white;
+    padding:14px 30px;
+    border-radius:6px;
+    font-size:18px;
+    font-weight:500;
+    text-decoratiom:none;
+
+    box-shadow: 0 0 15rgba(0,180,255,0.6) ;
+    transition:0.3s ease;
 }
 
 .contact-btn {
