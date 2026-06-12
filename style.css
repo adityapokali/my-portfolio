@@ -234,42 +234,40 @@ contact-links a {
 }
 .buttons {
     display: flex;
-    gap: 25px;
-    margin-top: 35px;
+    gap: 20px;
+    margin-top: 30px;
 }
+
 .resume-btn,
 .contact-btn {
-    text-decoration: none;
-    padding: 15px 30px;
-    border-radius: 10px;
+    display: inline-block;
+    min-width: 180px;
+    text-align: center;
+    padding: 15px 25px;
+    border-radius: 8px !important;
     font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
     transition: 0.3s;
 }
 
-
 .resume-btn {
-
-    background: #00bfff;
-    color: white;
-    
-    border:2px solid #009dff;
-    box-shadow: 0 0 20px #00bfff;
-    
+    background: #00bfff !important;
+    color: white !important;
+    border: 2px solid #00bfff;
+    box-shadow: 0 0 15px #00bfff;
 }
 
 .contact-btn {
-    bacground:transparent;
-    color: white;
-    border: 2px solid #009dff;
-    
-    
-    
+    background: transparent;
+    color: white !important;
+    border: 2px solid #00bfff;
 }
 
 .resume-btn:hover,
 .contact-btn:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 0 30px #009dff;
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px #00bfff;
 }
 @media (max-width: 768px) {
 .hero {
