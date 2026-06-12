@@ -286,15 +286,16 @@ contact-links a {
     height: 55px;
 
     background: transparent;
-    color: #00c6ff;
+    color: white;
     text-decoration: none;
 
-    display: flex;
+    display: inline-block;
+    padding:12px 25px;
     justify-content: center;
     align-items: center;
 
     border: 2px solid #00c6ff;
-    border-radius: 8px;
+    border-radius: 10px;
 
     font-size: 16px;
     font-weight: 500;
@@ -303,8 +304,9 @@ contact-links a {
 }
 
 .contact-btn:hover {
-    background: #00c6ff;
-    color: white;
+    background: cyan;
+    color: black;
+    
 }
 .resume-btn:hover,
 .contact-btn:hover {
