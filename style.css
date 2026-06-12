@@ -1,0 +1,212 @@
+body {
+    background-color: #121212;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+}
+
+h1 {
+    color: #00bfff;
+    font-size: 40px;
+}
+
+h2 {
+    color: #ff9800;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+.card {
+
+    width: 80%;
+    margin: 30px auto;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+    nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 80px;
+
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(12px);
+
+    position: sticky;
+    top: 0;
+    z-index:100;
+}
+
+.logo {
+    color: #00bfff;
+    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.logo:hover {
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Navigation menu */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+/* Navigation text */
+nav ul li {
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    transition: 0.3s;
+    position: relative;
+}
+
+/* Hover animation */
+nav ul li:hover {
+    color: #00bfff;
+    transform: translateY(-3px);
+}
+nav ul li::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #00bfff;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+nav ul li:hover::after {
+    width: 100%;
+}
+
+/* Theme button */
+.theme-btn {
+    background: linear-gradient(135deg, #00bfff, #0077ff);
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 10px #00bfff;
+    transition: 0.3s;
+}
+.light-mode {
+    background: white;
+    color: black;
+}
+
+.light-mode nav {
+    background: #e5e5e5;
+}
+
+.light-mode .card {
+    background: rgba(0, 0, 0, 0.1);
+    color: black;
+}
+
+.light-mode h1,
+.light-mode h2,
+.light-mode p,
+.light-mode li {
+    color: black;
+}
+
+.theme-btn:hover {
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 0 25px #00bfff;
+}
+.hero{
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 10px;
+}
+a {
+    color: #00bfff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: white;
+    text-shadow: 0 0 10px #00bfff;
+}
+
+@media (max-width: 768px) {
+
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    
+
+    
+
+    .hero img {
+        width: 120px;
+        height: 120px;
+        
+    }
+}
+.hero img {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #00bfff;
+    box-shadow:0 0 25px #00bfff;
+}
+body{
+    background: linear-gradient(135eg,#0f172a,#1e293b);
+    color:white;
+    animation:fadeIn 1.5s;
+    
+}
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+.light-mode{
+    background: white;
+    color: black;
+}
