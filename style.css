@@ -252,7 +252,7 @@ contact-links a {
 }
 
 .resume-btn {
-    width: 220px;
+    width: 200px;
     height: 55px;
 
     background: linear-gradient(90deg, #009dff, #00c6ff);
@@ -264,7 +264,7 @@ contact-links a {
     align-items: center;
     gap: 10px;
 
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
 
     border-radius: 8px;
