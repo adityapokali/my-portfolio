@@ -252,7 +252,25 @@ contact-links a {
 }
 
 .resume-btn {
-    background:red !important;
+    width: 220px;
+    height: 55px;
+
+    background: linear-gradient(90deg, #009dff, #00c6ff);
+    color: white;
+    text-decoration: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    border-radius: 8px;
+    box-shadow: 0 0 15px #00bfff;
+    transition: 0.3s ease;
+
 
 }
 
