@@ -281,11 +281,30 @@ contact-links a {
 }
 
 .contact-btn {
+    width: 200px;
+    height: 55px;
+
     background: transparent;
-    color: white !important;
-    border: 2px solid #00bfff;
+    color: #00c6ff;
+    text-decoration: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid #00c6ff;
+    border-radius: 8px;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    transition: 0.3s ease;
 }
 
+.contact-btn:hover {
+    background: #00c6ff;
+    color: white;
+}
 .resume-btn:hover,
 .contact-btn:hover {
     transform: translateY(-5px);
