@@ -257,6 +257,7 @@ contact-links a {
     background: #009dff;
     color: white;
     text-decoration: none;
+    box-shadow:none;
 
     display: flex;
     justify-content: center;
@@ -274,6 +275,7 @@ contact-links a {
 
 .resume-btn:hover {
     transform: translateY(-5px);
+    box-shadow:none;
     
 }
 }
