@@ -136,6 +136,7 @@ nav ul li:hover::after {
 
 .light-mode nav {
     background: #e5e5e5;
+    border-bottom:1px solid #ccc;
 }
 
 .light-mode .card {
@@ -179,7 +180,7 @@ nav ul li:hover::after {
 .light-mode .about-card p{
     color:black;
 }
-light-mode nav ul li a {
+.light-mode nav ul li a {
     color: black;
 }
 
@@ -259,7 +260,9 @@ a:hover {
     border: 6px solid #121212;
     
 }
-
+.light-mode .hero-image img{
+    border:6px solid white;
+}
 
 
 .hero-content {
@@ -492,10 +495,7 @@ body{
         opacity:1;
     }
 }
-.light-mode{
-    background: white;
-    color: black;
-}
+
 @keyframes rotateRing {
     from {
         transform: rotate(0deg);
