@@ -314,7 +314,7 @@ contact-links a {
     box-shadow: 0 0 25px #00bfff;
 }
 #about {
-    display: flex;
+    display: block;
     justify-content: space-between;
     align-items: center;
     gap: 70px;
