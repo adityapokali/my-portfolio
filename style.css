@@ -1,5 +1,5 @@
 html{
-    scroll-behaviour:smooth;
+    scroll-behavior:smooth;
 }
 body {
     background-color: #121212;
@@ -182,31 +182,47 @@ a:hover {
     padding: 5px 20px;
     text-align:left;
 }
+.hero-image {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image::before {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: conic-gradient(
+        #00bfff,
+        #00ffff,
+        #0077ff,
+        #00bfff
+    );
+    animation: rotateRing 6s linear infinite;
+    filter: blur(5px);
+}
+
 .hero-image img {
     width: 280px;
     height: 280px;
     border-radius: 50%;
     object-fit: cover;
-    border: 5px solid #00bfff;
-    box-shadow: 0 0 25px #00bfff,
-                0 0 50px #00bfff;
-    
+    position: relative;
+    z-index: 1;
+    border: 5px solid #121212;
+    box-shadow: 0 0 20px #00bfff;
+}
 }
 
 .hero-image img:hover {
-    width: 320px;
-    height: 320px;
-
-    object-fit: cover;
-    border-radius: 50%;
-
-    border: 5px solid #00bfff;
-
-    box-shadow:
-        0 0 25px #00bfff,
-        0 0 50px #00bfff;
-
-    transition: 0.3s;
+    width:320px;
+    height:320px;
+    ...
 }
 .hero-content {
     display: flex;
@@ -272,7 +288,7 @@ a:hover {
     font-size: 16px;
     font-weight: 500;
 
-    border-sizing:border-box;
+    box-sizing:border-box;
     transition: 0.3s ease;
 
 
@@ -324,7 +340,7 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 80x;
+    gap: 80px;
     width:85%;
     margin:40px auto 80px auto;
     text-align:left;
@@ -332,7 +348,7 @@ a:hover {
 
 .about-left {
     flex:1;
-    margin-width:550px;
+    max-width:550px;
     margin-top:0;
 }
 
@@ -416,7 +432,7 @@ a:hover {
 }
 
 body{
-    background: linear-gradient(135eg,#0f172a,#1e293b);
+    background: linear-gradient(135deg,#0f172a,#1e293b);
     color:white;
     animation:fadeIn 1.5s;
     
@@ -432,4 +448,12 @@ body{
 .light-mode{
     background: white;
     color: black;
+}
+@keyframes rotateRing {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
