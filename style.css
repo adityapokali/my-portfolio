@@ -315,16 +315,17 @@ contact-links a {
 }
 #about {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    gap: 80px;
-    padding: 80px 100px;
+    gap: 100px;
+    padding: 80px 50px;
     color: white;
+    box-sizing:border-box;
     text-align:left;
 }
 
 .about-left {
-    width: 50%;
+    width: 500px;
 }
 
 .about-left h2 {
@@ -351,8 +352,9 @@ contact-links a {
 }
 
 .about-card {
-    width: 380px;
+    width: 350px;
     padding: 30px;
+    margin-top:0;
     background: rgba(255,255,255,0.05);
     border: 1px solid rgba(0,255,255,0.3);
     border-radius: 20px;
