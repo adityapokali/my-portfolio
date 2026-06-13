@@ -544,3 +544,33 @@ body{
         transform: rotate(0deg);
     }
 }
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.social-icons a {
+    width: 60px;
+    height: 60px;
+    background: rgba(255,255,255,0.1);
+    border: 2px solid #00bfff;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 28px;
+    color: #00bfff;
+
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: #00bfff;
+    color: #121212;
+    transform: translateY(-8px) scale(1.1);
+    box-shadow: 0 0 25px #00bfff;
+}
