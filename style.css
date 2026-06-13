@@ -249,6 +249,10 @@ a:hover {
     animation:rotateRing 4s linear infinite;
     z-index:0;
 }
+.hero-image:hover:hover::before{
+    animation-duration:1.5s;
+    filter:brightness(1.5);
+}
 
 .hero-image img {
     width: 280px;
@@ -258,7 +262,10 @@ a:hover {
     position: relative;
     z-index: 1;
     border: 6px solid #121212;
-    
+    transition:transform 0.5s ease;
+}
+.hero-image:hover img{
+    transform:scale(1,12);
 }
 .light-mode .hero-image img{
     border:6px solid white;
