@@ -123,7 +123,7 @@ nav ul li:hover::after {
     transition: 0.3s;
 }
 .light-mode {
-    background: white;
+    background: #f5f7fa;
     color: black;
 }
 
@@ -165,9 +165,12 @@ nav ul li:hover::after {
     color: black;
 }
 .light-mode .about-card {
-    background: white;
+    background: #ffffff;
     border: 1px solid #cccccc;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.light-mode .about-card p{
+    color:black;
 }
 light-mode nav ul li a {
     color: black;
@@ -175,6 +178,9 @@ light-mode nav ul li a {
 
 .light-mode nav ul li a:hover {
     color: #0077ff;
+}
+.light-mode .about-left h2::after{
+    background:#0077ff;
 }
 a {
     color: #00bfff;
@@ -276,6 +282,9 @@ a:hover {
     line-height: 1.5;
     margin-top: 20px;
     color:#ddd;
+}
+.light-mode .description{
+    color:#333;
 }
 .buttons {
     display: flex;
@@ -383,7 +392,13 @@ a:hover {
     color: white;
     position: relative;
 }
+.light-mode .about-left h2 {
+    color: black;
+}
 
+.light-mode .about-left p {
+    color: #333;
+}
 .about-left h2::after {
     content: "";
     width: 70px;
