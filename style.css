@@ -313,6 +313,56 @@ contact-links a {
     transform: translateY(-5px);
     box-shadow: 0 0 25px #00bfff;
 }
+#about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 70px;
+    padding: 80px 100px;
+    color: white;
+}
+
+.about-left {
+    width: 50%;
+}
+
+.about-left h2 {
+    font-size: 40px;
+    margin-bottom: 25px;
+    color: white;
+    position: relative;
+}
+
+.about-left h2::after {
+    content: "";
+    width: 70px;
+    height: 3px;
+    background: cyan;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+}
+
+.about-left p {
+    color: #cccccc;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+.about-card {
+    width: 380px;
+    padding: 30px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(0,255,255,0.3);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,255,255,0.15);
+}
+
+.about-card p {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
 @media (max-width: 768px) {
 .hero {
     flex-direction: column;
