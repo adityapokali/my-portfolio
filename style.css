@@ -151,11 +151,31 @@ nav ul li:hover::after {
     color: #0077ff;
     border: 2px solid #0077ff;
 }
-light-mode .contact-btn:hover {
+.light-mode .contact-btn:hover {
     background: #0077ff;
     color: white;
 }
+.light-mode .hero-content h3,
+.light-mode .hero-content p {
+    color: black;
+}
+.light-mode .about-left h2,
+.light-mode .about-left p,
+.light-mode .about-card p {
+    color: black;
+}
+.light-mode .about-card {
+    background: white;
+    border: 1px solid #cccccc;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+light-mode nav ul li a {
+    color: black;
+}
 
+.light-mode nav ul li a:hover {
+    color: #0077ff;
+}
 a {
     color: #00bfff;
     text-decoration: none;
@@ -212,7 +232,7 @@ a:hover {
         #00bfff,
         transparent
     );
-    animation: spin 4s linear infinite;
+    animation:rotateRing 4s linear infinite;
     z-index:0;
 }
 
@@ -226,7 +246,7 @@ a:hover {
     border: 6px solid #121212;
     
 }
-}
+
 
 
 .hero-content {
@@ -311,7 +331,7 @@ a:hover {
     height: 55px;
 
     background: transparent;
-    color: blue;
+    color: white;
     text-decoration: none;
 
     display: flex;
