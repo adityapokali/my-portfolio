@@ -306,21 +306,23 @@ a:hover {
 }
 #about {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 100px;
-    width:90%;
-    margin:80px auto;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 120px;
+    width:85%;
+    margin:120px auto 80px auto;
     text-align:left;
 }
 
 .about-left {
     flex:1;
+    margin-width:550px;
+    margin-top:40px;
 }
 
 .about-left h2 {
-    font-size: 40px;
-    margin-bottom: 25px;
+    font-size: 48px;
+    margin-bottom: 30px;
     color: white;
     position: relative;
 }
@@ -338,13 +340,13 @@ a:hover {
 .about-left p {
     color: #cccccc;
     line-height: 1.8;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .about-card {
-    width: 350px;
-    padding: 30px;
-    margin-top:0;
+    width: 380px;
+    padding: 35px;
+    margin-top:20px;
     background: rgba(255,255,255,0.05);
     border: 1px solid rgba(0,255,255,0.3);
     border-radius: 20px;
