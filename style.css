@@ -283,11 +283,10 @@ a:hover {
     background:linear-gradient(90deg,#00bfff,#00ffff);
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
+    text-shadow:0 0 15px rgba(0,191,255,0.5);
 }
 
-.hero-content span {
-    color: #00bfff;
-}
+
 
 .description {
     font-size: 22px;
