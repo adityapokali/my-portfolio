@@ -280,6 +280,9 @@ a:hover {
     font-size: 65px;
     line-height:1.1;
     margin:10px 0;
+    background:linear-gradient(90deg,#00bfff,#00ffff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
 }
 
 .hero-content span {
