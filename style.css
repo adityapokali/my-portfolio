@@ -161,7 +161,7 @@ a:hover {
     color: white;
     text-shadow: 0 0 10px #00bfff;
 }
-contact-links a {
+.contact-links a {
     display: inline-block;
     margin: 10px;
     padding: 10px 20px;
@@ -174,16 +174,7 @@ contact-links a {
     transform: translateY(-5px);
     box-shadow: 0 0 15px #00bfff;
 }
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 100px;
-    width:90%;
-    margin:80 px auto 40px auto;
-    padding:50px;
-    box-sizing:border-box;
-}
+
 .hero-image img {
     width: 300px;
     height: 300px;
@@ -279,7 +270,7 @@ contact-links a {
     box-shadow:none;
     
 }
-}
+
 
 .contact-btn {
     width: 200px;
@@ -315,17 +306,16 @@ contact-links a {
 }
 #about {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 100px;
-    padding: 80px 50px;
-    color: white;
-    box-sizing:border-box;
+    width:90%;
+    margin:80px auto;
     text-align:left;
 }
 
 .about-left {
-    width: 500px;
+    flex:1;
 }
 
 .about-left h2 {
