@@ -249,4 +249,12 @@ h1, h2, h3, p { margin-top: 0; }
   .site-footer { grid-template-columns: auto 1fr; gap: 7px 12px; }
   .site-footer p { font-size: 8px; }
 }
+.scroll-reveal { opacity: 1; transform: none; }
+html.has-scroll-animations .scroll-reveal { opacity: 0; transform: translateY(22px); transition: opacity .65s ease, transform .65s cubic-bezier(.2,.7,.2,1); transition-delay: var(--reveal-delay, 0ms); }
+html.has-scroll-animations .scroll-reveal.is-visible, html.has-scroll-animations .scroll-reveal:focus-within { opacity: 1; transform: translateY(0); }
+.cursor-follower { display: none; }
+@media (hover: hover) and (pointer: fine) {
+  html.has-cursor-follower .cursor-follower { display: block; position: fixed; z-index: 9999; left: var(--pointer-x, -40px); top: var(--pointer-y, -40px); width: 16px; height: 16px; border: 1px solid #7da93d; border-radius: 50%; background: rgba(182, 239, 103, .3); box-shadow: 0 0 0 6px rgba(182, 239, 103, .12), 0 0 24px rgba(182, 239, 103, .24); pointer-events: none; transform: translate(-50%, -50%); opacity: 0; transition: opacity .18s ease, width .18s ease, height .18s ease, transform .08s ease-out; }
+  html.has-cursor-follower .cursor-follower.is-hovering { width: 28px; height: 28px; }
+}
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } }
