@@ -1,38 +1,40 @@
-function changeTheme(){
-    document.body.classList.toggle("light-mode");
+const menuButton = document.querySelector(".menu-toggle");
+const siteNav = document.querySelector("#site-nav");
+
+if (menuButton && siteNav) {
+  menuButton.addEventListener("click", () => {
+    const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+    menuButton.setAttribute("aria-expanded", String(!isOpen));
+    menuButton.setAttribute("aria-label", isOpen ? "Open navigation" : "Close navigation");
+    siteNav.classList.toggle("is-open", !isOpen);
+  });
+
+  siteNav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      menuButton.setAttribute("aria-expanded", "false");
+      menuButton.setAttribute("aria-label", "Open navigation");
+      siteNav.classList.remove("is-open");
+    });
+  });
 }
-ScrollReveal({
-    distance: "60px",
-    duration: 1500,
-    delay: 200,
-    reset: false
-});
 
-// Hero Section
-ScrollReveal().reveal(".hero-image", {
-    origin: "left"
-});
+const year = document.querySelector("#year");
+if (year) year.textContent = new Date().getFullYear();
 
-ScrollReveal().reveal(".hero-content", {
-    origin: "right"
-});
+const navLinks = document.querySelectorAll(".nav-link");
+const sections = document.querySelectorAll("main section[id]");
+if ("IntersectionObserver" in window) {
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      navLinks.forEach((link) => {
+        const isCurrent = link.getAttribute("href") === `#${entry.target.id}`;
+        link.classList.toggle("active", isCurrent);
+        if (isCurrent) link.setAttribute("aria-current", "location");
+        else link.removeAttribute("aria-current");
+      });
+    });
+  }, { rootMargin: "-30% 0px -60% 0px" });
 
-// About Section
-ScrollReveal().reveal(".about-left", {
-    origin: "left"
-});
-
-ScrollReveal().reveal(".about-card", {
-    origin: "right"
-});
-
-// Skill Cards
-ScrollReveal().reveal(".skill-box", {
-    origin: "bottom",
-    interval: 200
-});
-
-// Project & Contact Cards
-ScrollReveal().reveal("#projects, #contact", {
-    origin: "bottom"
-});
+  sections.forEach((section) => sectionObserver.observe(section));
+}
