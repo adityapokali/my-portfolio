@@ -1,5 +1,29 @@
 const menuButton = document.querySelector(".menu-toggle");
 const siteNav = document.querySelector("#site-nav");
+const themeButton = document.querySelector(".theme-toggle");
+
+function setTheme(theme, save = false) {
+  const isDark = theme === "dark";
+  document.documentElement.dataset.theme = isDark ? "dark" : "light";
+  document.querySelector('meta[name="theme-color"]')?.setAttribute("content", isDark ? "#111713" : "#f5f4f0");
+
+  if (themeButton) {
+    themeButton.setAttribute("aria-pressed", String(isDark));
+    themeButton.setAttribute("aria-label", `Switch to ${isDark ? "light" : "dark"} theme`);
+    themeButton.querySelector(".theme-icon").textContent = isDark ? "☀" : "☾";
+    themeButton.querySelector(".theme-label").textContent = isDark ? "Light" : "Dark";
+  }
+
+  if (save) {
+    try { localStorage.setItem("portfolio-theme", isDark ? "dark" : "light"); } catch {}
+  }
+}
+
+setTheme(document.documentElement.dataset.theme);
+themeButton?.addEventListener("click", () => {
+  const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+  setTheme(nextTheme, true);
+});
 
 if (menuButton && siteNav) {
   menuButton.addEventListener("click", () => {
