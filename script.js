@@ -65,7 +65,7 @@ if ("IntersectionObserver" in window) {
 
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const revealTargets = document.querySelectorAll(
-  ".section-heading, .about-content, .skills-intro, .skill-list, .section-topline, .project-card, .contact > .eyebrow, .contact > h2, .contact > .contact-email, .contact > .contact-bottom"
+  ".section-heading, .about-content, .about-card, .skills-intro, .skill-list, .section-topline, .project-card, .contact > .eyebrow, .contact > h2, .contact > .contact-email, .contact > .contact-bottom"
 );
 
 if (!reducedMotion && "IntersectionObserver" in window) {
