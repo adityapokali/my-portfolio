@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f4f0">
+  <meta name="description" content="View or download Aditya Pokali’s résumé.">
+  <title>Résumé — Aditya Pokali</title>
+  <script>
+    (() => {
+      let savedTheme = null;
+      try { savedTheme = localStorage.getItem("portfolio-theme"); } catch {}
+      const theme = savedTheme === "light" || savedTheme === "dark" ? savedTheme : "light";
+      document.documentElement.dataset.theme = theme;
+      document.querySelector('meta[name="theme-color"]').content = theme === "dark" ? "#111713" : "#f5f4f0";
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="resume-page">
+  <header class="resume-header section-wrap">
+    <a class="brand" href="./index.html" aria-label="Aditya Pokali, home">AP<span>.</span></a>
+    <a class="resume-back" href="./index.html"><span aria-hidden="true">←</span> Back to portfolio</a>
+  </header>
+
+  <main class="resume-main">
+    <div class="resume-toolbar">
+      <div>
+        <p class="eyebrow">DOCUMENT</p>
+        <h1>Résumé</h1>
+      </div>
+      <div class="resume-actions">
+        <a class="button button-primary" href="./resume.pdf" target="_blank" rel="noopener noreferrer">Open PDF <span aria-hidden="true">↗</span></a>
+        <a class="text-link" href="./resume.pdf" download>Download PDF <span aria-hidden="true">↓</span></a>
+      </div>
+    </div>
+
+    <section class="resume-frame" aria-label="Résumé preview">
+      <iframe src="./resume.pdf#toolbar=1&amp;navpanes=0&amp;view=FitH" title="Aditya Pokali résumé PDF" loading="eager"></iframe>
+    </section>
+    <p class="resume-fallback">If the preview doesn’t appear, <a href="./resume.pdf" target="_blank" rel="noopener noreferrer">open the PDF directly</a>.</p>
+  </main>
+</body>
+</html>
