@@ -146,6 +146,15 @@ h1, h2, h3, p { margin-top: 0; }
 .project-card { min-width: 0; }
 .project-art { height: 275px; position: relative; overflow: hidden; display: grid; place-items: center; background: var(--surface); }
 .art-number { position: absolute; right: 18px; top: 17px; color: #738078; font-size: 10px; letter-spacing: 1px; }
+.anime-art { background: var(--surface-strong); }
+.anime-search-card { width: min(72%, 330px); padding: 24px; border: 1px solid var(--line); background: var(--paper); box-shadow: 12px 14px 0 var(--surface-shadow); animation: artwork-float 6s ease-in-out infinite; }
+.anime-search-label { display: flex; align-items: center; gap: 7px; color: var(--muted); font-size: 8px; font-weight: 700; letter-spacing: 1.1px; }
+.anime-search-label span { width: 6px; height: 6px; border-radius: 50%; background: var(--green-dark); }
+.anime-search-card strong { display: block; margin: 22px 0 18px; font: 800 clamp(20px, 3vw, 30px)/1.12 var(--display); letter-spacing: -1.2px; }
+.anime-search-card strong span { color: #8bc83e; }
+.anime-search-bar { min-height: 34px; display: flex; align-items: center; gap: 8px; padding: 0 10px; border: 1px solid var(--line-strong); border-radius: 4px; color: var(--muted); font-size: 9px; }
+.anime-search-bar i { width: 8px; height: 8px; border: 1px solid var(--sage); border-radius: 50%; }
+.anime-search-bar b { margin-left: auto; color: var(--sage); font-size: 18px; font-weight: 500; }
 .portfolio-art { background: var(--surface-strong); }
 .art-window { width: 61%; height: 67%; background: var(--paper); box-shadow: 12px 14px 0 var(--surface-shadow); padding: 14px; position: relative; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; transform: rotate(-3deg); animation: artwork-float 6s ease-in-out infinite; }
 .art-window i { position: absolute; top: 12px; left: 13px; width: 5px; height: 5px; background: #a8d967; border-radius: 50%; }
@@ -170,6 +179,7 @@ h1, h2, h3, p { margin-top: 0; }
 .project-link-muted { color: var(--muted); cursor: default; }
 .project-art::after { content: ""; position: absolute; inset: -20% -45%; pointer-events: none; background: linear-gradient(110deg, transparent 43%, rgba(255, 255, 255, .42) 50%, transparent 57%); transform: translateX(-70%); animation: project-shimmer 6.5s ease-in-out infinite; }
 .project-card:nth-child(2) .project-art::after { animation-delay: 2.4s; }
+.project-card:nth-child(3) .project-art::after { animation-delay: 4.8s; }
 
 .contact { padding-top: 82px; padding-bottom: 48px; background: var(--contact-bg); color: var(--contact-ink); width: 100%; max-width: none; padding-inline: max(calc((100% - 1120px) / 2), 32px); }
 .contact .eyebrow { color: #b3c1b5; }
