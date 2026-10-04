@@ -34,33 +34,33 @@
 
 :root[data-theme="light"] {
   color-scheme: light;
-  --paper: #f4f7fc;
-  --ink: #18253a;
-  --muted: #62738e;
-  --line: #dce5f1;
-  --line-strong: #c8d5e8;
-  --heading-muted: #8494ad;
-  --sage: #617eaa;
-  --surface: #e9eff8;
-  --surface-strong: #dce7f5;
-  --surface-border: #d1ddee;
-  --surface-shadow: #9bacbf;
-  --contact-bg: #142039;
+  --paper: #f5f8ff;
+  --ink: #172541;
+  --muted: #596c8b;
+  --line: #d6e1f2;
+  --line-strong: #bacbe5;
+  --heading-muted: #8498b8;
+  --sage: #5874a6;
+  --surface: #eaf0fc;
+  --surface-strong: #dce8fb;
+  --surface-border: #cad9f0;
+  --surface-shadow: #a5b8d6;
+  --contact-bg: #111c38;
   --contact-ink: #f3f7ff;
   --nav-cta-bg: #1b3157;
   --nav-cta-ink: #fff;
   --nav-cta-hover: #294876;
-  --status-ring: #e0eaff;
-  --shadow: #15284b14;
-  --accent: #347de4;
-  --accent-strong: #00a9d6;
-  --accent-violet: #884fd4;
-  --accent-pink: #d14fa7;
-  --accent-teal: #168f98;
-  --accent-glow: #347de433;
-  --ambient-glow: #d5e5ff9c;
-  --ambient-glow-secondary: #e8d9ff80;
-  --ambient-glow-tertiary: #d4fbf680;
+  --status-ring: #d9e8ff;
+  --shadow: #18376618;
+  --accent: #416ff2;
+  --accent-strong: #087caa;
+  --accent-violet: #8150de;
+  --accent-pink: #d346ab;
+  --accent-teal: #078f9d;
+  --accent-glow: #416ff238;
+  --ambient-glow: #bfd8ffb3;
+  --ambient-glow-secondary: #dfccff99;
+  --ambient-glow-tertiary: #b7f4ee80;
 }
 
 * { box-sizing: border-box; }
@@ -103,7 +103,7 @@ h1, h2, h3, p { margin-top: 0; }
 .hero-actions { display: flex; align-items: center; gap: 25px; margin-top: 28px; }
 .button { min-height: 48px; padding: 0 19px; border-radius: 99px; display: inline-flex; align-items: center; gap: 17px; font-size: 12px; font-weight: 700; transition: transform .2s, box-shadow .2s; }
 .button:hover { transform: translateY(-3px); box-shadow: 0 8px 24px var(--shadow); }
-.button-primary { background: linear-gradient(110deg, var(--accent), var(--accent-strong)); color: #061225; box-shadow: 0 0 22px var(--accent-glow); }
+.button-primary { background: linear-gradient(110deg, var(--accent), var(--accent-strong)); color: var(--nav-cta-ink); box-shadow: 0 0 22px var(--accent-glow); }
 .button-primary:hover { background: linear-gradient(110deg, var(--accent-strong), var(--accent-violet)); color: #fff; box-shadow: 0 0 32px var(--accent-glow); }
 .button span, .text-link span { font-size: 16px; }
 .text-link { font-size: 12px; font-weight: 700; border-bottom: 1px solid var(--line-strong); padding-bottom: 5px; }
