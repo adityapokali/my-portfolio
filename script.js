@@ -84,32 +84,3 @@ if (!reducedMotion && "IntersectionObserver" in window) {
     revealObserver.observe(target);
   });
 }
-
-const cursorFollower = document.querySelector(".cursor-follower");
-const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
-if (cursorFollower && finePointer && !reducedMotion) {
-  document.documentElement.classList.add("has-cursor-follower");
-
-  window.addEventListener("pointermove", (event) => {
-    cursorFollower.style.setProperty("--pointer-x", `${event.clientX}px`);
-    cursorFollower.style.setProperty("--pointer-y", `${event.clientY}px`);
-    cursorFollower.style.opacity = "1";
-  }, { passive: true });
-
-  window.addEventListener("pointerleave", () => {
-    cursorFollower.style.opacity = "0";
-    cursorFollower.classList.remove("is-hovering");
-  });
-
-  document.addEventListener("pointerover", (event) => {
-    if (event.target instanceof Element && event.target.closest("a, button")) {
-      cursorFollower.classList.add("is-hovering");
-    }
-  });
-
-  document.addEventListener("pointerout", (event) => {
-    const leftControl = event.target instanceof Element && event.target.closest("a, button");
-    const enteredControl = event.relatedTarget instanceof Element && event.relatedTarget.closest("a, button");
-    if (leftControl && !enteredControl) cursorFollower.classList.remove("is-hovering");
-  });
-}
