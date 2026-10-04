@@ -84,3 +84,47 @@ if (!reducedMotion && "IntersectionObserver" in window) {
     revealObserver.observe(target);
   });
 }
+
+const cursorMascot = document.querySelector(".cursor-mascot");
+const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+if (cursorMascot && finePointer && !reducedMotion) {
+  document.documentElement.classList.add("has-cursor-mascot");
+  let x = -80;
+  let y = -80;
+  let targetX = x;
+  let targetY = y;
+  let mascotFrame = 0;
+
+  function floatMascot() {
+    x += (targetX - x) * .16;
+    y += (targetY - y) * .16;
+    cursorMascot.style.setProperty("--mascot-x", `${x}px`);
+    cursorMascot.style.setProperty("--mascot-y", `${y}px`);
+    mascotFrame = requestAnimationFrame(floatMascot);
+  }
+
+  window.addEventListener("pointermove", (event) => {
+    targetX = event.clientX;
+    targetY = event.clientY;
+    cursorMascot.classList.add("is-visible");
+    if (!mascotFrame) mascotFrame = requestAnimationFrame(floatMascot);
+  }, { passive: true });
+
+  window.addEventListener("pointerleave", () => {
+    cursorMascot.classList.remove("is-visible", "is-excited");
+    cancelAnimationFrame(mascotFrame);
+    mascotFrame = 0;
+  });
+
+  document.addEventListener("pointerover", (event) => {
+    if (event.target instanceof Element && event.target.closest("a, button")) {
+      cursorMascot.classList.add("is-excited");
+    }
+  });
+
+  document.addEventListener("pointerout", (event) => {
+    const leftControl = event.target instanceof Element && event.target.closest("a, button");
+    const enteredControl = event.relatedTarget instanceof Element && event.relatedTarget.closest("a, button");
+    if (leftControl && !enteredControl) cursorMascot.classList.remove("is-excited");
+  });
+}
