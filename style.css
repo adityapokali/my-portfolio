@@ -59,7 +59,9 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 92px; }
-body { margin: 0; background: radial-gradient(ellipse at 82% 0%, var(--ambient-glow), transparent 42%), radial-gradient(ellipse at 10% 38%, var(--ambient-glow-secondary), transparent 38%), var(--paper); color: var(--ink); font-family: var(--body); -webkit-font-smoothing: antialiased; }
+body { position: relative; isolation: isolate; margin: 0; background: radial-gradient(ellipse at 82% 0%, var(--ambient-glow), transparent 42%), radial-gradient(ellipse at 10% 38%, var(--ambient-glow-secondary), transparent 38%), var(--paper); color: var(--ink); font-family: var(--body); -webkit-font-smoothing: antialiased; }
+body::before { content: ""; position: fixed; z-index: -1; inset: 0; pointer-events: none; opacity: .42; background-image: radial-gradient(circle, rgba(126, 187, 255, .32) 1px, transparent 1.7px), linear-gradient(rgba(126, 187, 255, .055) 1px, transparent 1px), linear-gradient(90deg, rgba(126, 187, 255, .055) 1px, transparent 1px); background-size: 46px 46px, 92px 92px, 92px 92px; mask-image: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, .72) 68%, transparent 100%); animation: ambient-grid-drift 34s linear infinite; }
+:root[data-theme="light"] body::before { opacity: .18; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; }
 button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
@@ -339,5 +341,6 @@ html.has-scroll-animations .scroll-reveal.is-visible, html.has-scroll-animations
 @keyframes scroll-cue-drift { 0%, 100% { width: 32px; transform: translateX(0); } 50% { width: 46px; transform: translateX(6px); } }
 @keyframes artwork-float { 0%, 100% { transform: translateY(0) rotate(-3deg); } 50% { transform: translateY(-5px) rotate(-1deg); } }
 @keyframes project-shimmer { 0%, 62% { transform: translateX(-70%); } 85%, 100% { transform: translateX(70%); } }
+@keyframes ambient-grid-drift { to { background-position: 46px 46px, 92px 0, 0 92px; } }
 @keyframes resume-frame-glow { 0%, 100% { box-shadow: 0 14px 40px var(--shadow), 0 0 0 0 rgba(105, 152, 245, 0); } 50% { box-shadow: 0 14px 40px var(--shadow), 0 0 0 3px rgba(105, 152, 245, .38), 0 0 22px rgba(105, 152, 245, .16); } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation: none !important; } }
