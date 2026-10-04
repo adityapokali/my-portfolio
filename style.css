@@ -118,6 +118,9 @@ h1, h2, h3, p { margin-top: 0; }
 .photo-frame { position: relative; z-index: 1; width: min(76%, 328px); height: 410px; padding: 12px; background: linear-gradient(145deg, var(--accent), var(--surface-strong) 48%, var(--accent-violet)); border-radius: 47% 47% 18px 18px; transform: rotate(2deg); box-shadow: 0 0 42px var(--accent-glow), 20px 22px 0 var(--surface-border); animation: photo-float 5.5s ease-in-out infinite; }
 .photo-frame img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; border-radius: 47% 47% 12px 12px; filter: saturate(.82); }
 .photo-tag { position: absolute; right: -55px; bottom: 25px; border: 1px solid var(--line-strong); background: var(--surface); border-radius: 5px; padding: 14px 17px; color: var(--ink); font: 600 11px/1.55 var(--display); transform: rotate(-3deg); box-shadow: 0 8px 25px var(--shadow); }
+.hero-avatar-sticker { position: absolute; z-index: 3; left: -2px; bottom: 12px; width: 145px; height: 166px; animation: avatar-float 3.8s ease-in-out infinite; }
+.hero-avatar-sticker img { display: block; width: 100%; height: 100%; object-fit: contain; object-position: center bottom; filter: drop-shadow(0 8px 18px rgba(73, 168, 255, .28)); }
+.hero-avatar-bubble { position: absolute; z-index: 1; top: 2px; right: -2px; padding: 8px 13px; border: 1px solid rgba(255, 255, 255, .72); border-radius: 16px 16px 16px 5px; background: linear-gradient(110deg, var(--accent-strong), var(--accent-violet)); color: #fff; font: 800 13px/1 var(--display); box-shadow: 0 5px 18px var(--accent-glow); transform: rotate(5deg); animation: avatar-bubble-pop 2.8s ease-in-out infinite; }
 .orbit { position: absolute; border: 1px solid var(--surface-border); border-radius: 50%; box-shadow: 0 0 18px var(--accent-glow); }
 .orbit-one { width: 95%; height: 90%; transform: rotate(-28deg); border-color: var(--accent-violet); opacity: .52; animation: orbit-one-spin 24s linear infinite; }
 .orbit-two { width: 105%; height: 72%; transform: rotate(29deg); border-color: var(--accent-teal); opacity: .36; animation: orbit-two-spin 32s linear infinite; }
@@ -237,6 +240,7 @@ h1, h2, h3, p { margin-top: 0; }
   .hero-visual { height: 390px; }
   .photo-frame { height: 330px; width: 76%; }
   .photo-tag { right: -38px; }
+  .hero-avatar-sticker { width: 124px; height: 142px; bottom: 7px; left: 0; }
   .about { gap: 40px; }
   .about-intro { gap: 40px; }
   .skills { gap: 35px; }
@@ -267,6 +271,8 @@ h1, h2, h3, p { margin-top: 0; }
   .footer-socials { gap: 12px; }
   .hero-visual { height: 365px; width: 100%; margin-top: 35px; align-self: center; overflow: clip; }
   .photo-frame { width: 68%; height: 325px; }
+  .hero-avatar-sticker { width: 112px; height: 128px; bottom: 1px; left: 1px; }
+  .hero-avatar-bubble { right: -9px; top: 2px; font-size: 11px; padding: 7px 11px; }
   .photo-tag { right: -24px; bottom: 19px; font-size: 9px; padding: 11px 13px; }
   .hero-index { top: 24px; right: 0; }
   .scroll-cue { bottom: 20px; }
@@ -369,6 +375,8 @@ main, .site-footer { position: relative; z-index: 1; }
 @keyframes highlight-breathe { 0%, 100% { opacity: .78; transform: rotate(-2deg) scaleX(.92); } 50% { opacity: 1; transform: rotate(-2deg) scaleX(1); } }
 @keyframes cursor-blink { 0%, 48% { opacity: 1; } 50%, 100% { opacity: .18; } }
 @keyframes photo-float { 0%, 100% { transform: translateY(0) rotate(2deg); } 50% { transform: translateY(-10px) rotate(0deg); } }
+@keyframes avatar-float { 0%, 100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-8px) rotate(2deg); } }
+@keyframes avatar-bubble-pop { 0%, 100% { transform: rotate(5deg) translateY(0) scale(1); } 50% { transform: rotate(2deg) translateY(-4px) scale(1.04); } }
 @keyframes orbit-one-spin { from { transform: rotate(-28deg); } to { transform: rotate(332deg); } }
 @keyframes orbit-two-spin { from { transform: rotate(29deg); } to { transform: rotate(-331deg); } }
 @keyframes scroll-cue-drift { 0%, 100% { width: 32px; transform: translateX(0); } 50% { width: 46px; transform: translateX(6px); } }
